@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Catisha ♡ — From Ursia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ffb6c9;--deep:#d95d83;--cream:#fff8f3;--brown:#51343a;--red:#f15b75}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(135deg,#fff7fa,#ffeef4);color:var(--brown);font-family:"Baloo 2",cursive;overflow-x:hidden}
+button{font:inherit;cursor:pointer;border:0}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative}
+.card{width:min(900px,94vw);background:rgba(255,255,255,.78);border:2px solid rgba(255,182,201,.55);box-shadow:0 20px 60px rgba(143,74,96,.15);border-radius:34px;padding:38px;text-align:center;backdrop-filter:blur(8px)}
+h1{font-size:clamp(2.7rem,8vw,5.7rem);margin:.1em 0;color:#d94f78;line-height:.95}
+h2{font-size:clamp(2rem,5vw,3.5rem);margin:.2em 0;color:#c74e72}
+p{font-size:1.18rem;line-height:1.55}
+.script{font-family:Pacifico,cursive}
+.small{font-size:.95rem;opacity:.75}
+.btn{padding:14px 25px;border-radius:999px;background:linear-gradient(135deg,#ff8faf,#e95d82);color:white;box-shadow:0 9px 20px rgba(217,93,131,.25);transition:.2s}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+.ghost{background:#fff;color:#cf5578;border:2px solid #ffc2d1;box-shadow:none}
+.badge{display:inline-block;background:#fff0f4;color:#c84f74;padding:6px 15px;border-radius:999px;margin:4px}
+#intro{background:radial-gradient(circle at 50% 30%,#fff 0,#ffeef4 48%,#ffdce7 100%)}
+.bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.68);border:2px solid rgba(255,255,255,.9);box-shadow:0 8px 20px rgba(200,90,120,.12);animation:float 5s ease-in-out infinite}
+.bubble:after{content:"♡";color:#f38aa5;position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+@keyframes float{50%{transform:translateY(-24px) rotate(8deg)}}
+.fade{animation:fade .8s ease both}@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+#game{display:none}
+#bubbleZone{height:360px;position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(#fff8fb,#ffe9f0);margin:22px 0;border:2px dashed #ffc0d1}
+.gamebubble{position:absolute;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff,#ffc3d2 65%,#f48ba7);border:3px solid #fff;box-shadow:0 8px 18px rgba(190,75,110,.2);animation:rise 7s linear infinite;display:grid;place-items:center;color:#d45a7b;font-size:22px}
+@keyframes rise{from{transform:translateY(420px) scale(.7)}to{transform:translateY(-100px) scale(1.05)}}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:20px}
+.photo-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px;border:5px solid white;box-shadow:0 8px 22px rgba(100,40,55,.14);transition:.25s}
+.photo-grid img:hover{transform:rotate(-2deg) scale(1.03)}
+.letter{background:#fffdf9;border:1px solid #f2d7dd;border-radius:24px;padding:25px;text-align:left;box-shadow:inset 0 0 30px rgba(245,202,213,.15)}
+.letter p{font-size:1.08rem}
+.envelope{width:220px;height:145px;margin:25px auto;position:relative;background:#ffd0dc;border-radius:8px;box-shadow:0 15px 30px rgba(150,60,90,.16);overflow:hidden}
+.envelope:before{content:"";position:absolute;inset:0;background:#ffc1d1;clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%)}
+.heartseal{position:absolute;z-index:2;left:50%;top:48%;transform:translate(-50%,-50%);font-size:38px}
+#secret{display:none}
+.confetti{position:fixed;pointer-events:none;z-index:99;font-size:20px;animation:fall 1.5s ease-out forwards}
+@keyframes fall{to{transform:translate(var(--x),100vh) rotate(720deg);opacity:0}}
+.spark{position:fixed;pointer-events:none;color:#ff6d91;z-index:98;animation:pop .9s forwards}
+@keyframes pop{to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+.progress{height:9px;background:#ffe0e8;border-radius:99px;overflow:hidden;margin:14px 0}.progress span{display:block;height:100%;width:0;background:#ed7192;transition:.4s}
+footer{padding:35px;text-align:center;color:#a9687c}
+</style>
+</head>
+<body>
+
+<section class="screen" id="intro">
+  <div class="bubble" style="width:70px;height:70px;left:8%;top:15%"></div>
+  <div class="bubble" style="width:48px;height:48px;right:12%;top:22%;animation-delay:1s"></div>
+  <div class="bubble" style="width:90px;height:90px;right:5%;bottom:12%;animation-delay:2s"></div>
+  <div class="card fade">
+    <div class="badge">♡ 27 ♡</div>
+    <p class="script" style="font-size:1.7rem">A tiny little website made for...</p>
+    <h1>Catisha</h1>
+    <p>There is someone turning <b>18</b> tomorrow,<br>and someone who has been planning a tiny surprise. 👀</p>
+    <p class="small">From your Ursia ♡</p>
+    <button class="btn" onclick="start()">Open your surprise 🎁</button>
+  </div>
+</section>
+
+<section class="screen" id="game">
+  <div class="card">
+    <div class="badge">LEVEL 1 • BUBBLE HUNT</div>
+    <h2>Pop the love bubbles! 🫧</h2>
+    <p>There are <b>27</b> little bubbles hidden here.<br>Pop them all to unlock the next surprise.</p>
+    <div class="progress"><span id="bar"></span></div>
+    <div id="bubbleZone"></div>
+    <p id="score">Bubbles popped: 0 / 27</p>
+    <button class="btn" id="next1" style="display:none" onclick="show('memory')">You found them all! 💗</button>
+  </div>
+</section>
+
+<section class="screen" id="memory" style="display:none">
+ <div class="card fade">
+   <div class="badge">LEVEL 2 • OUR LITTLE WORLD</div>
+   <h2>Our Bubu & Dudu corner 🐻‍❄️🐻</h2>
+   <p>Because apparently two tiny bears can represent an entire relationship. 😭💗</p>
+   <div class="photo-grid">
+    <img src="assets/bubu-dudu-1.jpg"><img src="assets/bubu-dudu-2.jpg">
+    <img src="assets/bubu-dudu-3.jpg"><img src="assets/bubu-dudu-4.jpg">
+    <img src="assets/bubu-dudu-5.jpg"><img src="assets/bubu-dudu-6.jpg">
+    <img src="assets/bubu-dudu-7.jpg">
+   </div>
+   <p style="margin-top:25px"><b>March 4, 2024</b> → the date our little story began ♡</p>
+   <button class="btn" onclick="show('letter')">Next surprise 💌</button>
+ </div>
+</section>
+
+<section class="screen" id="letter" style="display:none">
+ <div class="card fade">
+   <div class="badge">LEVEL 3 • OPEN THE LETTER</div>
+   <h2>A letter for Catisha 💌</h2>
+   <div class="envelope" onclick="openLetter()"><div class="heartseal">💗</div></div>
+   <p id="tap">Tap the envelope</p>
+   <div class="letter" id="secret">
+    <p>My dearest Catisha,</p>
+    <p>Happy 18th Birthday! ♡</p>
+    <p>Somehow, <b>March 4, 2024</b> became one of the most special dates in my world. And if I could keep one number close to our story, it would always be <b>27</b>.</p>
+    <p>I hope this new chapter brings you tiny happy moments, big dreams, lots of laughter, and people who make you feel loved. And whenever you see Bubu and Dudu being ridiculously cute, I hope they remind you of us. 🐻‍❄️🐻</p>
+    <p>Thank you for being my Catisha. Keep smiling, keep being you, and please remember that someone named Ursia made an entire silly little website just to make you smile today. 🥹💗</p>
+    <p class="script" style="text-align:right;font-size:1.5rem">— Ursia ♡</p>
+   </div>
+   <button class="btn" id="letterNext" style="display:none;margin-top:18px" onclick="show('final')">One last thing... 🎁</button>
+ </div>
+</section>
+
+<section class="screen" id="final" style="display:none">
+ <div class="card fade">
+  <div class="badge">LEVEL 4 • 27</div>
+  <h1 style="font-size:clamp(2.5rem,7vw,5rem)">Happy 18th,<br>Catisha! 🎂</h1>
+  <p class="script" style="font-size:1.65rem">You are officially 18 ✨</p>
+  <p>But before you go...</p>
+  <button class="btn" onclick="finale()">Tap for 27 wishes ♡</button>
+  <div id="wishes" style="display:none;margin-top:20px">
+    <p>27 tiny wishes, just for you:</p>
+    <div id="wishText" class="letter" style="text-align:center;font-size:1.2rem;min-height:80px"></div>
+    <p class="small">Keep tapping the button until all 27 appear. ♡</p>
+    <button class="btn ghost" onclick="nextWish()">Next wish ✨</button>
+  </div>
+ </div>
+</section>
+<footer>Made with ♡ by Ursia for Catisha • 27 • March 4, 2024 → forever in the little storybook</footer>
+
+<script>
+let popped=0, wishesIndex=0;
+const wishes=[
+"May you laugh until your cheeks hurt. ♡","May your dreams find their way to you. ✨",
+"May every ordinary day hide a tiny surprise.","May you always have a reason to smile.",
+"May Bubu & Dudu levels of cuteness follow you everywhere. 🐻",
+"May your confidence grow with every new chapter.","May you collect beautiful memories.",
+"May your birthday cake be extra delicious. 🎂","May you never forget how special you are.",
+"May every little thing you love find you.","May your days be softer and brighter.",
+"May your phone gallery fill with happy moments. 📸","May you keep your beautiful heart.",
+"May you discover something wonderful this year.","May laughter always find you first.",
+"May your 18th year be full of adventures.","May you get more reasons to say 'hehe'.",
+"May every stressful day end with peace.","May you be surrounded by people who care.",
+"May your favorite songs hit differently this year. 🎶","May your biggest wishes become tiny realities.",
+"May you always have someone to share silly moments with.","May you make memories worth retelling.",
+"May today feel as special as you are.","May the number 27 keep bringing us luck. ♡",
+"May there always be a little Bubu & Dudu happiness in your day.","And my final wish: Happy Birthday, Catisha. ♡"
+];
+
+function start(){document.getElementById('intro').style.display='none';document.getElementById('game').style.display='flex';makeBubbles();}
+function makeBubbles(){
+ const zone=document.getElementById('bubbleZone');
+ for(let i=0;i<27;i++){
+   const b=document.createElement('button'); b.className='gamebubble'; b.innerHTML=i===26?'27':'♡';
+   b.style.left=(Math.random()*88+2)+'%'; b.style.animationDelay=(-Math.random()*6)+'s';
+   b.style.animationDuration=(5+Math.random()*4)+'s';
+   b.onclick=()=>{if(b.dataset.popped)return;b.dataset.popped=1;b.style.pointerEvents='none';b.style.animation='none';b.style.transform='scale(0)';b.style.opacity=0; popped++; sparkles(b); document.getElementById('score').textContent=`Bubbles popped: ${popped} / 27`;document.getElementById('bar').style.width=(popped/27*100)+'%';if(popped===27)document.getElementById('next1').style.display='inline-block';};
+   zone.appendChild(b);
+ }
+}
+function show(id){document.querySelectorAll('.screen').forEach(x=>{if(x.id!=='intro')x.style.display='none'});document.getElementById(id).style.display='flex';window.scrollTo(0,0); if(id==='final')confetti(45);}
+function openLetter(){document.getElementById('secret').style.display='block';document.getElementById('tap').textContent='Opened with love ♡';document.getElementById('letterNext').style.display='inline-block';confetti(18);}
+function confetti(n=20){for(let i=0;i<n;i++){let e=document.createElement('div');e.className='confetti';e.textContent=['♡','♥','✦','✧','🎀','💗'][Math.floor(Math.random()*6)];e.style.left=Math.random()*100+'vw';e.style.top=(-20-Math.random()*30)+'px';e.style.setProperty('--x',(Math.random()*240-120)+'px');e.style.animationDelay=Math.random()*.5+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),2200)}}
+function sparkles(el){let r=el.getBoundingClientRect();for(let i=0;i<7;i++){let s=document.createElement('span');s.className='spark';s.textContent='♥';s.style.left=r.left+r.width/2+'px';s.style.top=r.top+r.height/2+'px';s.style.setProperty('--dx',(Math.random()*120-60)+'px');s.style.setProperty('--dy',(Math.random()*120-60)+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),1000)}}
+function finale(){document.getElementById('wishes').style.display='block';if(wishesIndex===0)nextWish();confetti(15);}
+function nextWish(){if(wishesIndex>=27){wishesIndex=0}document.getElementById('wishText').textContent=wishes[wishesIndex++];}
+</script>
+</body>
+</html>
